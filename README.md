@@ -19,6 +19,22 @@ Parameters
 | --batch-size | Batch size. Default: 100                                      |
 | --model      | Type of model. Choose from *dense* or *conv*. Default: *conv* |
 
+### Models
+
+#### dense
+
+```
+input -> linear32 -> relu -> linear32 -> relu -> linear32 -> relu -> linear32 -> relu -> linear32 -> relu -> linear32 -> relu -> linear10
+```
+
+#### conv
+
+```
+input -> conv3x3 -> relu -> pool -> conv3x3 -> relu -> pool -> flatten -> linear128 -> relu -> linear10
+```
+
+Both model uses softmax activation with cross entropy loss.
+
 ## Results
 
 Results of the two models with default settings:
