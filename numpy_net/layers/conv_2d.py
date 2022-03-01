@@ -26,6 +26,7 @@ class Conv2D(Layer):
         self.in_dim = in_dim
         self.out_dim = out_dim
         self.k_size = k
+        self.is_trainable = True
 
         # check on kernel size
         if isinstance(self.k_size, int):
@@ -70,7 +71,7 @@ class Conv2D(Layer):
         self._dW = np.einsum('bhwo,bhwjki->oijk', dZ, self._prev_Z) / dZ.shape[0]
 
         # bias
-        self._db = dZ.mean(axis=0)
+        self._db = dZ.mean(axis=(0, 1, 2))
 
         # dZ shape: batch_size x height x width x out_channels
         # kernel shape: out_channels x in_channels x kernel_height x kernel_width

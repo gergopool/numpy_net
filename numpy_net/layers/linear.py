@@ -40,9 +40,3 @@ class Linear(Layer):
         self._dW = dZ.T @ self._prev_Z / dZ.shape[0]
         self._db = dZ.mean(axis=0)
         return dZ @ self.W
-
-    def update(self, lr: float):
-        self.W -= lr * self._dW
-        self.b -= lr * self._db
-        self._dW = None
-        self._db = None
