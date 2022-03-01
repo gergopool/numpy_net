@@ -1,12 +1,12 @@
-# :hammer: NumpyNet - Neural Network in Numpy
+# :triangular_flag_on_post: NumpyNet - Neural Network in Numpy
 
 This is a simple neural network implementation in Numpy. Feel free to look around and see how your neural network operates inside when trained on MNIST! :blush:
 
-## :scroll: Requirements
+## Requirements
 
 Numpy only. I have made the code in 1.20.2, but any version compatible with this should work out fine.
 
-## :running_man: Run
+##  Run
 
 ```bash
 python train.py
@@ -19,7 +19,7 @@ Parameters
 | --batch-size | Batch size. Default: 100                                      |
 | --model      | Type of model. Choose from *dense* or *conv*. Default: *conv* |
 
-## :chart_with_upwards_trend: Results
+## Results
 
 Results of the two models with default settings:
 
@@ -28,7 +28,7 @@ Results of the two models with default settings:
 | *dense* | 79.82%         | 81.50%       |
 | *conv*  | 90.84%         | 91.93%       |
 
-## :memo: Notes
+## Notes
 
  * I used Stochastic Gradient Descent (SGD)
  * Some layers were made but not used eventually (e.g. Dropout)
