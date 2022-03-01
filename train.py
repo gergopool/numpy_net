@@ -5,7 +5,7 @@ import numpy_net as npn
 parser = argparse.ArgumentParser()
 parser.add_argument('--lr', type=float, help='Learning rate', default=0.1)
 parser.add_argument('--epochs', type=int, help='Number of epochs', default=10)
-parser.add_argument('--batch-size', type=int, help='Batch size', default=100)
+parser.add_argument('--batch-size', type=int, help='Batch size', default=50)
 parser.add_argument('--model',
                     type=str,
                     help="Model type",
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     # TRAIN
     for epoch in range(args.epochs):
-        print(f"Epoch {epoch}/{args.epochs}")
+        print(f"Epoch {epoch+1}/{args.epochs}")
         run_epoch(model, loss_fn, train_x, train_y)
         run_epoch(model, loss_fn, val_x, val_y, backprop=False, name='Val')
         print()

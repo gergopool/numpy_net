@@ -16,7 +16,7 @@ Parameters
 | ------------ | ------------------------------------------------------------- |
 | --lr         | Learning rate. Default: 0.1                                   |
 | --epochs     | Number of epochs. Default: 10                                 |
-| --batch-size | Batch size. Default: 100                                      |
+| --batch-size | Batch size. Default: 50                                       |
 | --model      | Type of model. Choose from *dense* or *conv*. Default: *conv* |
 
 ### Models
@@ -41,11 +41,11 @@ Results of the two models with default settings:
 
 | Model   | Train Accuracy | Val Accuracy |
 | ------- | -------------- | ------------ |
-| *dense* | 79.82%         | 81.50%       |
-| *conv*  | 90.84%         | 91.93%       |
+| *dense* | 86.27%         | 84.33%       |
+| *conv*  | 93.86%         | 94.54%       |
 
 ## Notes
 
- * I used Stochastic Gradient Descent (SGD)
+ * I used Stochastic Gradient Descent (SGD) with momentum of 0.9
  * Some layers were made but not used eventually (e.g. Dropout)
  * In Conv2D and MaxPool2D pool-size and stride must match.
